@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package antivpn;
+
+import "google/protobuf/empty.proto";
+option go_package = "protos/antivpn";
+
+service AntiVPN {
+  rpc CheckVPN(CheckVPNRequest) returns (CheckVPNResponse) {}
+  rpc AddWhitelist(CheckVPNRequest) returns (google.protobuf.Empty){}
+  rpc RemoveWhitelist(CheckVPNRequest) returns(google.protobuf.Empty){}
+  rpc AddBlackList(CheckVPNRequest) returns(google.protobuf.Empty){}
+  rpc RemoveBlackList(CheckVPNRequest) returns(google.protobuf.Empty){}
+}
+
+message CheckVPNRequest {
+  string ip = 1;
+}
+
+message CheckVPNResponse {
+  bool proxy = 1;
+}

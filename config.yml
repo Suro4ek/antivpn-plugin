@@ -1,0 +1,11 @@
+mysql:
+  host: 192.168.0.3
+  port: 3306
+  user: root
+  pass: example
+  db: test
+grpc_port: 9000
+redis:
+  host: 192.168.0.5
+  port: 6379
+  pass: redis
