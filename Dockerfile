@@ -8,8 +8,7 @@ COPY go.sum ./
 RUN go mod download
 
 COPY ./ ./
-COPY config.yml ./
-RUN go build cmd/main.go cmd/services.go
+RUN go build cmd/main.go
 
 CMD ["./main"]
 
