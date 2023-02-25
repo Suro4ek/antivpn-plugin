@@ -111,5 +111,5 @@ func (s service) GetResult(ip string) (bool, error) {
 	}
 	s.log.Info(ip+" is proxy ", ipModel.Proxy)
 	s.client.DB.Save(&ipModel)
-	return true, nil
+	return ipModel.Proxy, nil
 }
